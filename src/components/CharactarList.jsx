@@ -1,7 +1,7 @@
 import { EyeIcon } from "@heroicons/react/24/outline";
 import React from "react";
 
-function CharacterList({ characters }) {
+function CharacterList({characters}) {
   return (
     <div className="character-list">
       {characters.map((item) => {
