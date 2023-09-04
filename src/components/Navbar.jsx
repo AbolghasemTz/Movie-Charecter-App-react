@@ -40,7 +40,7 @@ export function Favourites({ favourites, onDeleteFavourite }) {
     <>
       <Modal onOpen={setIsOpen} open={isOpen} title="List of Favourites">
         {favourites.map((item) => (
-          <Character key={item.id} item={item}>
+          <Character key={item.id} selectedId="1" item={item}>
             <button
               className="icon red"
               onClick={() => onDeleteFavourite(item.id)}
