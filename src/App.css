@@ -54,6 +54,25 @@
   gap: 2rem;
 }
 
+@media (max-width: 768px) {
+  .main{
+    flex-direction: column;
+  }
+  .navbar__result{
+    display: none;
+  }
+  .text-field{
+    width: 120px;
+
+  }
+}
+@media (max-width: 425px) {
+
+  .text-field{
+    width: 120px;
+
+  }
+}
 .characters-list {
   width: 40%;
 }

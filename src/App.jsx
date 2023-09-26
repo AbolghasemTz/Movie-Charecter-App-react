@@ -11,16 +11,16 @@ function App() {
   const [query, setQuery] = useState("");
 
  const {isLoading , characters} = useCharacter(query)
+//  const [favourites, setFavourites] = useLocalStorage("favourites")
   const [selectedId, setSelectedId] = useState(null);
  
-  const [favourites, setFavourites] = useLocalStorage("favourites")
-  // const [favourites, setFavourites] = useState(() => JSON.parse(localStorage.getItem('favourites')) || []);
+  const [favourites, setFavourites] = useState(() => JSON.parse(localStorage.getItem('favourites')) || []);
 
 
 
-// useEffect(() => {
-// localStorage.setItem('favourites',JSON.stringify(favourites))
-// },[favourites])
+useEffect(() => {
+localStorage.setItem('favourites',JSON.stringify(favourites))
+},[favourites])
 
   const handleSelectChracter = (id) => {
     setSelectedId((prevId) => (prevId === id ? null : id));
